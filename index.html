@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieVault | Cinema Database</title>
+    <link rel="stylesheet" href="./frontend/style.css">
+</head>
+<body>
+    <header>
+        <h1>🎬 MovieVault</h1>
+        <button id="openFormBtn" class="btn-primary">+ Add Movie</button>
+    </header>
+
+    <main>
+        <section id="formSection" class="hidden">
+            <form id="movieForm" class="card">
+                <h3>Add New Movie</h3>
+                <input type="text" id="title" placeholder="Movie Title" required>
+                <input type="number" id="year" placeholder="Year" required>
+                <input type="number" step="0.1" id="rating" placeholder="Rating (0.0)">
+                <input type="text" id="genre" placeholder="Genre">
+                <textarea id="description" placeholder="Description"></textarea>
+                <div class="form-actions">
+                    <button type="submit" class="btn-success">Save Movie</button>
+                    <button type="button" id="closeFormBtn" class="btn-text">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="listSection">
+            <div id="statusMessage"></div>
+            <div id="movieGrid" class="grid"></div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content card">
+            <span id="closeModal" class="close">&times;</span>
+            <div id="movieDetails"></div>
+        </div>
+    </div>
+
+    <script src="./frontend/script.js"></script>
+</body>
+</html>
